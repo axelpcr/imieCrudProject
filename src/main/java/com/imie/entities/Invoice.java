@@ -24,7 +24,8 @@ public class Invoice extends AbsEntity {
     private Float tva;
 
     @PrePersist
-    protected void onCreate() {
+    protected void onCreate()
+    {
         dateCreated = new LocalDateTime();
         reference = ReferenceGeneration.generateReference("INV2016");
     }
