@@ -7,6 +7,8 @@ import java.util.Collection;
 import java.util.List;
 
 /**
+ * Product Dao
+ *
  * Created by axel on 14/06/16.
  */
 public interface ProductDao extends CrudRepository<Product, Integer> {

@@ -1,9 +1,11 @@
 package com.imie;
 
-import com.imie.entities.Product;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Main spring boot application
+ */
 @SpringBootApplication
 public class ImieProjectApplication {
 

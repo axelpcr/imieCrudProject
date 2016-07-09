@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
+ * Customer entity
+ *
  * Created by axel on 14/06/16.
  */
 @Entity

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 
 /**
+ * Product Service
+ *
  * Created by axel on 14/06/16.
  */
 @Service
@@ -15,6 +17,9 @@ public class ProductService {
 
     @Autowired
     private ProductDao productDao;
+
+    //-------------    CRUD    ------------------//
+
 
     public Product insert(Product product){
       return productDao.save(product);
@@ -30,5 +35,15 @@ public class ProductService {
 
     public void delete(Integer id) {
         productDao.delete(id);
+    }
+
+    //------------ Getters and Setters ---------------//
+
+    public ProductDao getProductDao() {
+        return productDao;
+    }
+
+    public void setProductDao(ProductDao productDao) {
+        this.productDao = productDao;
     }
 }

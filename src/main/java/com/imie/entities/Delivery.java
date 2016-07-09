@@ -11,6 +11,8 @@ import javax.persistence.*;
 import java.util.Collection;
 
 /**
+ * Delivery entity
+ *
  * Created by axel on 14/06/16.
  */
 @Entity
@@ -27,7 +29,7 @@ public class Delivery extends AbsEntity {
 
     @PrePersist
     protected void onCreate() {
-        reference = ReferenceGeneration.generateReference("DEL2016");
+        reference = ReferenceGeneration.generateReference("DEL");
         dateCreated = new LocalDateTime();
     }
 

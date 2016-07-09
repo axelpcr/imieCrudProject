@@ -10,6 +10,8 @@ import org.joda.time.LocalDateTime;
 import javax.persistence.*;
 
 /**
+ * Invoice entity
+ *
  * Created by axel on 14/06/16.
  */
 @Entity
@@ -27,7 +29,6 @@ public class Invoice extends AbsEntity {
     protected void onCreate()
     {
         dateCreated = new LocalDateTime();
-        reference = ReferenceGeneration.generateReference("INV2016");
     }
 
     public String getReference() {

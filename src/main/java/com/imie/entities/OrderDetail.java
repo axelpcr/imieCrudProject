@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.util.Collection;
 
 /**
+ * OrderDetail entity
+ *
  * Created by axel on 14/06/16.
  */
 @Entity

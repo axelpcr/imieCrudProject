@@ -3,6 +3,8 @@ package com.imie.entities;
 import javax.persistence.*;
 
 /**
+ * Parent class of all Entities
+ *
  * Created by axel on 14/06/16.
  */
 @MappedSuperclass
@@ -10,11 +12,11 @@ public class AbsEntity {
 
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        protected Long id;
+        protected Integer id;
         @Version
         protected Long version;
 
-        public Long getId() {
+        public Integer getId() {
             return id;
         }
 
@@ -22,7 +24,7 @@ public class AbsEntity {
             return version;
         }
 
-        public void setId(Long id) {
+        public void setId(Integer id) {
             this.id = id;
         }
 

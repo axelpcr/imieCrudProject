@@ -15,6 +15,9 @@ import org.joda.time.format.DateTimeFormatter;
 import java.io.IOException;
 
 /**
+ * This class is a date deserializer.
+ * Format is yyyy-MM-dd HH:mm:ss
+ *
  * Created by axel on 14/06/16.
  */
 public class CustomLocalDateTimeDeserializer extends StdScalarDeserializer<LocalDateTime> {
@@ -29,6 +32,15 @@ public class CustomLocalDateTimeDeserializer extends StdScalarDeserializer<Local
         super(vc);
     }
 
+    /**
+     * This function deserialize date
+     *
+     * @param jp
+     * @param ctxt
+     * @return
+     * @throws IOException
+     * @throws JsonProcessingException
+     */
     @Override
     public LocalDateTime deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JsonProcessingException {
         String dateStr = null;

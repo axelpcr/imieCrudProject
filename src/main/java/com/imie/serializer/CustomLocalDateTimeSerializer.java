@@ -11,6 +11,9 @@ import org.joda.time.format.DateTimeFormatter;
 import java.io.IOException;
 
 /**
+ *  This class is a date serializer.
+ * Format is yyyy-MM-dd HH:mm:ss
+ *
  * Created by axel on 14/06/16.
  */
 public class CustomLocalDateTimeSerializer extends StdScalarSerializer<LocalDateTime> {
@@ -26,6 +29,14 @@ public class CustomLocalDateTimeSerializer extends StdScalarSerializer<LocalDate
         super(t);
     }
 
+    /**
+     * This function serialize date.
+     * @param value
+     * @param jgen
+     * @param provider
+     * @throws IOException
+     * @throws JsonProcessingException
+     */
     @Override
     public void serialize(LocalDateTime value, JsonGenerator jgen, SerializerProvider provider) throws IOException, JsonProcessingException {
         jgen.writeStartObject();

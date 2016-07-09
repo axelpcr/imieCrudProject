@@ -9,6 +9,8 @@ import org.joda.time.LocalDateTime;
 
 import javax.persistence.*;
 /**
+ * Order entity
+ *
  * Created by axel on 14/06/16.
  */
 @Entity
@@ -26,7 +28,7 @@ public class Order extends AbsEntity {
     @PrePersist
     protected void onCreate() {
         dateCreated = new LocalDateTime().now();
-        reference = ReferenceGeneration.generateReference("ORD2016");
+        reference = ReferenceGeneration.generateReference("ORD");
     }
 
     public String getReference() {
